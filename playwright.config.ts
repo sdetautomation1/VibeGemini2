@@ -75,8 +75,10 @@ export default defineConfig({
       use: {
         browserName: 'chromium',
         headless: !config.headed,
+        viewport: null, // Use full window size
         launchOptions: {
           slowMo: config.slowMo,
+          args: ['--start-maximized'],
         },
       },
     },
