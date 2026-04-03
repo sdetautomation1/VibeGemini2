@@ -1,0 +1,32 @@
+{
+  "name": "playwright-bdd-cucumber-framework",
+  "version": "1.0.0",
+  "description": "BDD Cucumber Framework with Playwright, TypeScript, and Page Object Model",
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "npx bddgen",
+    "test": "npx bddgen && npx playwright test --project=chromium",
+    "test:headed": "npx bddgen && npx playwright test --project=chromium --headed",
+    "test:firefox": "npx bddgen && npx playwright test --project=firefox",
+    "test:webkit": "npx bddgen && npx playwright test --project=webkit",
+    "test:all-browsers": "npx bddgen && npx playwright test",
+    "test:smoke": "npx bddgen && npx playwright test --project=chromium --grep @smoke",
+    "test:negative": "npx bddgen && npx playwright test --project=chromium --grep @negative",
+    "test:debug": "npx bddgen && npx playwright test --project=chromium --debug",
+    "report": "npx playwright show-report reports/playwright-html",
+    "typecheck": "npx tsc --noEmit"
+  },
+  "keywords": ["playwright", "cucumber", "bdd", "typescript", "pom", "testing"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "playwright-bdd": "^8.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
